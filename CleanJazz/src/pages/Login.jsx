@@ -39,7 +39,7 @@ export default function Login() {
   
   const handleLogin = async () => {
     try {
-      const response = await axios.post(`http://localhost:3000/users/login`, { username, password });
+      const response = await axios.post(`${Endpoint.apiEndpoint}/users/login`, { username, password });
       setAccessToken(response.data.accessToken);
       Cookies.set('accessToken', response.data.accessToken);
       
