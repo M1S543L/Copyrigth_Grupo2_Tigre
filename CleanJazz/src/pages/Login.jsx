@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -18,6 +18,7 @@ import Cookies from "js-cookie";
 import axios from "axios";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Endpoint from '../services/Endpoint';
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -43,7 +44,7 @@ export default function Login() {
       setAccessToken(response.data.accessToken);
       Cookies.set('accessToken', response.data.accessToken);
       
-      navigate("/home")
+      navigate("/")
       // redireccionar a la página de dashboard después del inicio de sesión
     } catch (error) {
       alert('Credenciales inválidas');
