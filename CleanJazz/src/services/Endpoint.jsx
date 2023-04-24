@@ -1,6 +1,6 @@
 //Cabmiar al momento de subir el bakcend
 
-const apiEndpoint="http://localhost:3000"
+const apiEndpoint="https://api-pwa-proyecto-industria.onrender.com"
 
 export default{
     apiEndpoint
